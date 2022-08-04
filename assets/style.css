@@ -1,7 +1,121 @@
 /* AVAILABLE FONT FAMILIES: OXYGEN, PRESS START 2P */
 
+:root {
+    --base-font: "Oxygen";
+    --fun-font: "Press Start 2P";
+    --back-color: hsl(217, 82%, 85%);
+    --back2-color: white;
+    --text-color: white;
+    --text2-color: #020242;
+    --button-color: hsl(217, 54%, 33%);
+    --quizbox-color: white;
+    --quiztext-color: hsl(217, 54%, 33%);    
+}
 
 body {
-font-family: "Oxygen";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oxygen";
+    background: var(--back-color, 50%);    
+    color: var(--text2-color);
 }
+
+/* BEGIN HIGH SCORE STYLING */
+.high_score_navigation {
+    background-color: var(--back2-color);
+    color: var(--text2-color);
+    padding: 15px 15px;
+
+}
+/* BEGIN STYLING OF WELCOME/BEGIN SCREEN */
+.start_page_header {
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center; 
+    margin: 100px 0 0 0;   
+}
+
+.start_text {
+    font-size: 60px;
+    text-align: center;
+    margin: 200px 0px;
+}
+/* end styling */
+
+/* BEGIN STYLING OF BEGIN BUTTON */
+.begin_btn {
+    position: absolute;
+    top: 75%;
+    left: 40%;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-size: 35px;
+    font-weight: 400;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.begin_btn:hover {
+    background-color: var (--back2-color);
+    color: var(--text2-color);
+}
+
+.begin_btn button {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-size: 35px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+}
+/* end styling of begin button */
+
+/* BEGIN STYLING OF RULES BOX */
+.rules_box {
+    background-color: var(--back2-color);
+    border: solid;
+    border-color: var(--text2-color);
+    border-radius: 10px;
+    border-width: 5px;
+    position: absolute;
+    top: 15%;
+    left: 8.5%;
+    opacity: 40%;    
+}
+
+.rules_text {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    padding: 35px 0;
+    flex-wrap: wrap;
+}
+
+.rules_details {
+    font-size: 30px;
+    font-weight: 300;
+    text-align: left;
+    padding: 10px 25px;
+}
+
+.rules_details span {
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.rules_buttons button {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px 30px;
+    margin: 20px;
+}
+
+/* end rules box styling */
+
 
