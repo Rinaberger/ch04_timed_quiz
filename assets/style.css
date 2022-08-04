@@ -9,7 +9,8 @@
     --text2-color: #020242;
     --button-color: hsl(217, 54%, 33%);
     --quizbox-color: white;
-    --quiztext-color: hsl(217, 54%, 33%);    
+    --quiztext-color: hsl(217, 54%, 33%);
+    --accent-color: rgb(133, 20, 20);    
 }
 
 body {
@@ -25,7 +26,13 @@ body {
 .high_score_navigation {
     background-color: var(--back2-color);
     color: var(--text2-color);
-    padding: 15px 15px;
+    font-weight: bold;
+    padding: 15px;
+    width: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
 
 }
 /* BEGIN STYLING OF WELCOME/BEGIN SCREEN */
@@ -70,6 +77,7 @@ body {
     font-weight: 400;
     border: none;
     cursor: pointer;
+    transition: all .3s ease;
 }
 /* end styling of begin button */
 
@@ -81,9 +89,9 @@ body {
     border-radius: 10px;
     border-width: 5px;
     position: absolute;
-    top: 15%;
+    top: 12%;
     left: 8.5%;
-    opacity: 40%;    
+    opacity: 100%;    
 }
 
 .rules_text {
@@ -91,7 +99,6 @@ body {
     font-weight: 700;
     text-align: center;
     padding: 35px 0;
-    flex-wrap: wrap;
 }
 
 .rules_details {
@@ -104,18 +111,45 @@ body {
 .rules_details span {
     font-weight: 700;
     font-size: 35px;
+    color: var(--accent-color);
+}
+
+.rules_buttons {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    padding: 15px 30px; 
+    text-align: center;   
 }
 
 .rules_buttons button {
     background-color: var(--button-color);
     color: var(--text-color);
-    font-size: 30px;
-    text-align: center;
+    font-size: 30px; 
     border-radius: 10px;
-    padding: 15px 30px;
-    margin: 20px;
+    width: 200px;
+    height: 100px;
+    cursor: pointer;
+    transition: all .3s ease;
 }
 
+.rules_buttons .quit {
+    background-color: var(--back2-color);
+    color: var(--text2-color);
+    border: solid;
+    border-color: var(--button-color);
+    margin-left: 60px;    
+}
+
+.rules_buttons .quit:hover {
+    background-color: var(--button-color);
+    opacity: 33%;
+}
+
+.rules_buttons .start:hover {
+    opacity: 66%;
+}
 /* end rules box styling */
 
 
