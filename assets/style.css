@@ -33,12 +33,12 @@ body {
     border-radius: 10px;
     text-align: center;
     cursor: pointer; 
-    opacity: 100%; /* hide high score */ 
+    display: block;             /* hide high score */ 
 }
 /* BEGIN STYLING OF WELCOME/BEGIN SCREEN */
 
 .start_box {
-    opacity: 100%;              /* hide start box */
+    display: block;             /* hide start box */
 }
 .start_page_header {
     font-size: 80px;
@@ -57,7 +57,7 @@ body {
 /* BEGIN STYLING OF BEGIN BUTTON */
 .begin-btn {
     position: absolute;
-    top: 75%;
+    top: 60%;
     left: 40%;
     background-color: var(--button-color);
     color: var(--text-color);
@@ -88,7 +88,7 @@ body {
     top: 12%;
     left: 8.5%;
     z-index: 8;
-    opacity: 000%;          /* hide rules box */    
+    display: none;               /* hide rules box */    
 }
 
 .rules_text {
@@ -151,13 +151,12 @@ body {
 
 /*BEGIN COUNTDOWN STYLING */
 /* end countdown styling */
-
-/* BEGIN QUIZ BOX STYLING */
-.qa-event {
-    opacity: 0000%;              /* hide Q&A box*/
+.start-qa-event {
+    display: none;
 }
-
+/* BEGIN QUIZ BOX STYLING */
 .quiz_box {
+    display: flex;
     background-color: var(--back2-color);
     border: solid;
     border-color: var(--text2-color);
@@ -204,21 +203,25 @@ body {
 }
 
 .next {
+    background-color: var(rgb(107, 9, 9));
+    color: var(--text2-color);
     display: inline-flex;
     align-content: center;
     justify-content: center;
     margin: auto;
     padding: 10px 40px; 
-    margin: 15px 0 0 425px;
-    text-align: center;   
-    background-color: var(#515050);
-    color: var(--text2-color);
+    margin: 5px 0 0 425px;
+    text-align: center;
     font-size: 25px; 
     border-radius: 10px;
     width: 200px;
     height: 50px;
     cursor: pointer;
     transition: all .3s ease;    
+}
+
+.next:hover {
+    background-color: grey;
 }
 
 /* BEGIN TIMER/SCORE BOX STYLE */
@@ -236,7 +239,7 @@ body {
     align-items: center;
     position:absolute;
     top: 5%; 
-    left: 85%;   
+    left: 85%;
 }
 
 .seconds {
