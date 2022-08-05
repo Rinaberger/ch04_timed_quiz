@@ -23,7 +23,7 @@
         </header>
         <div class="start_text">Would you like to take the quiz?</div>
         <!-- Start Quiz Button -->
-        <div class="begin_btn"><button>Let's Begin</button></div>
+        <button class="begin-btn" id="begin-btn">Let's Begin</button>        
     </section>
 
     <!-- Object/Rules of Quiz -->
@@ -48,6 +48,40 @@
             </div>
         </div>
     </section>
+
+    <!-- countdown "5, 4, 3, 2, 1, Begin Quiz "-->
+    <section class="countdown" id="countdown">
+
+    </section>
+
+    <!-- Question/Answers-->
+    <section class="quiz_box" id="quiz">
+        <div class ="question" id="question_text">
+            <span>How many letters, and, and, and, and, are in HTML?</span>
+        </div>
+        <div class="answers-btn" id="answers-btn">
+            <button class="answer_details answer1">Answer 1</button>
+            <button class="answer_details answer2">Answer 2</button>
+            <button class="answer_details answer3">Answer 3</button>
+            <button class="answer_details answer4">Answer 4</button>            
+        </div>
+        <!-- Next Button -->
+        <div class="next_button">
+            <div>
+                <button class="next">Next</button>
+            </div>
+        </div>
+    </section>
+    <!-- Timer -->
+    <section class="timer-box" id="timer-box">
+        <div class="timer" id="timeleft">
+            <span class=seconds id=seconds>60</span> seconds
+        </div>
+        <div class="score" id="score">
+            <span class="calculated-score">25</span> points
+        </div>
+    </section>
+
     
 
     

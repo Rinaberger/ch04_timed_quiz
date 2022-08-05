@@ -32,26 +32,30 @@ body {
     margin: 10px;
     border-radius: 10px;
     text-align: center;
-    cursor: pointer;
-
+    cursor: pointer; 
+    opacity: 0%; /* hide high score */ 
 }
 /* BEGIN STYLING OF WELCOME/BEGIN SCREEN */
+
+.start_box {
+    opacity: 0%;
+}
 .start_page_header {
     font-size: 80px;
     font-weight: bold;
     text-align: center; 
-    margin: 100px 0 0 0;   
+    margin: 75px 0 0 0;     
 }
 
 .start_text {
     font-size: 60px;
     text-align: center;
-    margin: 200px 0px;
+    margin: 150px 0px;
 }
 /* end styling */
 
 /* BEGIN STYLING OF BEGIN BUTTON */
-.begin_btn {
+.begin-btn {
     position: absolute;
     top: 75%;
     left: 40%;
@@ -63,22 +67,14 @@ body {
     border-radius: 10px;
     padding: 15px 30px;
     cursor: pointer;
-}
-
-.begin_btn:hover {
-    background-color: var (--back2-color);
-    color: var(--text2-color);
-}
-
-.begin_btn button {
-    background-color: var(--button-color);
-    color: var(--text-color);
-    font-size: 35px;
-    font-weight: 400;
-    border: none;
-    cursor: pointer;
     transition: all .3s ease;
+    z-index: 9;
 }
+
+.begin-btn:hover {
+    opacity: 50%;
+}
+
 /* end styling of begin button */
 
 /* BEGIN STYLING OF RULES BOX */
@@ -91,7 +87,8 @@ body {
     position: absolute;
     top: 12%;
     left: 8.5%;
-    opacity: 100%;    
+    z-index: 8;
+    opacity: 0%; /* code to make box disappear */    
 }
 
 .rules_text {
@@ -152,4 +149,102 @@ body {
 }
 /* end rules box styling */
 
+/*BEGIN COUNTDOWN STYLING */
+/* end countdown styling */
 
+/* BEGIN QUIZ BOX STYLING */
+.quiz_box {
+    background-color: var(--back2-color);
+    border: solid;
+    border-color: var(--text2-color);
+    border-radius: 10px;
+    border-width: 5px;
+    width: 1000px;
+    height: 600px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    z-index: 4;
+    opacity: 100%; /* code to make box disappear */    
+}
+
+.question {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: left;
+    padding: 35px 15px;
+}
+
+.quiz_box .answer_details {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    border-radius: 10px;
+    width: 850px;
+    height: 75px;
+    cursor: pointer;
+    transition: all .3s ease;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: left;
+    padding: 15px 15px;
+    margin: 5px 70px;
+}
+
+.answer_details:hover {
+    opacity: 50%;
+}
+
+.next {
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    padding: 10px 40px; 
+    margin: 15px 0 0 425px;
+    text-align: center;   
+    background-color: var(#515050);
+    color: var(--text2-color);
+    font-size: 25px; 
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    transition: all .3s ease;    
+}
+
+/* BEGIN TIMER/SCORE BOX STYLE */
+.timer-box {
+    background-color: var(--back2-color);
+    color: var(--text2-color);
+    font-size: 15px;
+    height: 75px;
+    width: 150px;
+    border: solid;
+    border-color: var(--text2-color);
+    border-radius: 10px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    position:absolute;
+    top: 5%; 
+    left: 85%;   
+}
+
+.seconds {
+    font-weight: 600;
+}
+
+.calculated-score {
+    font-weight: 600;
+}
+
+.timer {
+    padding: 12px 0 10px 0;
+}
+/* end timer/score box style */
