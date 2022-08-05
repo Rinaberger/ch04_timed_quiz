@@ -33,12 +33,12 @@ body {
     border-radius: 10px;
     text-align: center;
     cursor: pointer; 
-    opacity: 0%; /* hide high score */ 
+    opacity: 100%; /* hide high score */ 
 }
 /* BEGIN STYLING OF WELCOME/BEGIN SCREEN */
 
 .start_box {
-    opacity: 0%;
+    opacity: 100%;              /* hide start box */
 }
 .start_page_header {
     font-size: 80px;
@@ -88,7 +88,7 @@ body {
     top: 12%;
     left: 8.5%;
     z-index: 8;
-    opacity: 0%; /* code to make box disappear */    
+    opacity: 000%;          /* hide rules box */    
 }
 
 .rules_text {
@@ -153,6 +153,10 @@ body {
 /* end countdown styling */
 
 /* BEGIN QUIZ BOX STYLING */
+.qa-event {
+    opacity: 0000%;              /* hide Q&A box*/
+}
+
 .quiz_box {
     background-color: var(--back2-color);
     border: solid;
@@ -166,8 +170,7 @@ body {
     position: absolute;
     top: 5%;
     left: 15%;
-    z-index: 4;
-    opacity: 100%; /* code to make box disappear */    
+    z-index: 4;    
 }
 
 .question {
@@ -222,7 +225,7 @@ body {
 .timer-box {
     background-color: var(--back2-color);
     color: var(--text2-color);
-    font-size: 15px;
+    font-size: 18px;
     height: 75px;
     width: 150px;
     border: solid;
@@ -245,6 +248,6 @@ body {
 }
 
 .timer {
-    padding: 12px 0 10px 0;
+    padding: 10px 0 10px 0;
 }
 /* end timer/score box style */
