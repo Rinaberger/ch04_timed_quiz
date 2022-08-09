@@ -92,7 +92,6 @@ body {
 .begin-btn:hover {
     opacity: 50%;
 }
-
 /* end styling of begin button */
 
 /* BEGIN STYLING OF RULES BOX */
@@ -175,6 +174,15 @@ body {
 /* end rules box styling */
 
 /*BEGIN COUNTDOWN STYLING */
+.countdowntext {
+    font: var(--fun-font);
+    font-weight: 700;
+    font-size: 300px;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
 /* end countdown styling */
 .start_question {
     display: none;
