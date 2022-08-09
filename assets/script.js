@@ -5,7 +5,7 @@ let beginBtnEl = document.getElementById("begin-btn-1");
 
 let startBoxEl = document.getElementById("start_quiz");
 let rulesBoxEl = document.getElementById("rules");
-let beginQuizBtnEl = document.getElementById("start_quiz");
+let beginQuizBtnEl = document.getElementById("start_questions");
 let quitQuizBtnEl = document.getElementById("quit_quiz"); 
 //add countdown variable
 let quizQuestBoxEl = document.getElementById("q&a");
