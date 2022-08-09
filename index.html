@@ -7,7 +7,7 @@
     <title>Timed Technology Quiz</title>
      <!-- links to css and js-->
      <link rel="stylesheet" href="./assets/style.css"/>
-     <script defer src ="./assets/script.js"></script>
+     
      <!-- link to google fonts -->
      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen"> 
      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P">  
@@ -15,14 +15,14 @@
 
 <body>
     <!-- HIGH SCORE NAVIGATION BAR PULLING FROM LOCAL STORAGE -->
-    <nav class="high_score_navigation">See High Scores</nav>      
+    <nav class="high_score_navigation" id="high_score">See High Scores</nav>      
     <!-- Welcome/Start Box -->
     <section class="start_box" id="start_quiz">
         <header class="start_page_header">
             Javascript Knowledge Quiz
         </header>
          <!-- Start Quiz Button -->
-        <button class="begin-btn" id="begin-btn">Let's Begin</button>        
+        <button class="begin-btn" id="begin-btn-1">Let's Begin</button>        
     </section>
 
     <!-- Object/Rules of Quiz -->
@@ -40,10 +40,10 @@
         <!-- Begin/Cancel Buttons -->
         <div class="rules_buttons">
             <div>
-                <button class="start"><p>Start Quiz</p></button>
+                <button class="start" id="start_quiz"><p>Start Quiz</p></button>
             </div>
             <div>
-                <button class="quit"><p class="quit_text">Exit Quiz</p></button>
+                <button class="quit" id="quit_quiz"><p class="quit_text">Exit Quiz</p></button>
             </div>
         </div>
     </section>
@@ -66,7 +66,7 @@
                 <button class="answer_details answer4">Answer 4</button>            
             </div>
             <!-- Next Button -->
-            <div class="next_button">
+            <div class="next_button" id="next_question">
                 <button class="next">Next</button>
             </div>
         </div>
@@ -86,8 +86,11 @@
     
 
 
-    <Footer>
+    <footer>
         
-    </Footer>
+    </footer>
+
+    <script src="./assets/script.js"></script>
+
 </body>
 </html>

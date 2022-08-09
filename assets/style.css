@@ -35,11 +35,21 @@ body {
     cursor: pointer; 
     display: block;             /* hide high score */ 
 }
+
+.high_score_dissappear {
+    display: none;
+}
+
 /* BEGIN STYLING OF WELCOME/BEGIN SCREEN */
 
 .start_box {
     display: block;             /* hide start box */
 }
+
+.start_box_dissappear {
+    display: None;
+}
+
 .start_page_header {
     font-size: 80px;
     font-weight: bold;
@@ -89,6 +99,10 @@ body {
     left: 8.5%;
     z-index: 8;
     display: none;               /* hide rules box */    
+}
+
+.rules_box_turnOn {
+    display: block;
 }
 
 .rules_text {
