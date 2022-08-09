@@ -36,8 +36,12 @@ body {
     display: block;             /* hide high score */ 
 }
 
-.high_score_dissappear {
+.high_score_turnOff {
     display: none;
+}
+
+.high_score_turnOn {
+    display: block;
 }
 
 /* BEGIN STYLING OF WELCOME/BEGIN SCREEN */
@@ -46,8 +50,12 @@ body {
     display: block;             /* hide start box */
 }
 
-.start_box_dissappear {
-    display: None;
+.start_box_turnOff {
+    display: none;
+}
+
+.start_box_turnOn {
+    display: block;
 }
 
 .start_page_header {
@@ -97,12 +105,15 @@ body {
     position: absolute;
     top: 12%;
     left: 8.5%;
-    z-index: 8;
     display: none;               /* hide rules box */    
 }
 
 .rules_box_turnOn {
     display: block;
+}
+
+.rules_box_turnOff {
+    display: none;
 }
 
 .rules_text {
@@ -165,9 +176,18 @@ body {
 
 /*BEGIN COUNTDOWN STYLING */
 /* end countdown styling */
-.start-qa-event {
+.start_question {
     display: none;
 }
+
+.start_question_turnOn {
+    display: block;
+}
+
+.start_question_turnOff {
+    display: none;
+}
+
 /* BEGIN QUIZ BOX STYLING */
 .quiz_box {
     display: flex;
