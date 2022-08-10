@@ -5,20 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz High Scores</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/highscore.css">
+
+    <!-- link to google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P">     
 </head>
+
 <body>
-    <section>
-        <h1>High Scores</h1>
-        <p id="highscores"></p>    
+    <section class="highscore_box" id="highscore-results">
+        <h1 id="highscore_title">High Scores</h1>
+        <ul id="highscorelist"></ul>        
     </section>
 
-<script>
-    function getHighScore() {
-        let storage = JSON.parse(localStorage.getItem('quizHighscores'))
-        "highscores".innerHTML = x;
-    }
 
-</script>    
+    <script src="./assets/highscore.js"></script>
 
 </body>
 

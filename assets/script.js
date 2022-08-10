@@ -78,7 +78,7 @@ nextQuestionBtnEl.onclick = () => {
 }
 
 
-let time = 60
+let time = 45
 function startTimer() {    
     let counter = setInterval(timer, 1000);
     function timer() {
@@ -93,10 +93,7 @@ function startTimer() {
     }
 }
 
-let score = 7
-function updateScore() {
-    keepScore.textContent = "7";
-}
+let score = 0
 
 function selectAnswer(event) {
     let answer = event.target.textContent;
@@ -105,6 +102,7 @@ function selectAnswer(event) {
             console.log("correct answer")
             score += 5;
             console.log(score)
+            keepScore.textContent = score;
         }
         else {
         console.log("wrong answer")
@@ -112,11 +110,20 @@ function selectAnswer(event) {
         }
 }
 
+/*
+let scoreTag = document.getElementById("finalscore");
+function showFinalScore() {
+    let finalScore = '<div class="final_score" id="finalScore">' + score + '</div>'
+    scoreTag.innerHTML = "12";
+    console.log("final score");
+} */
 
 function endQuiz() {
     quizQuestBoxEl.className += " start_question_turnOff";
     endQuizEl.className += 'end-on'
     highScoreEl.className += " high_score_turnOn"
+    //showFinalScore();  
+
 
     let btn = document.getElementById('end-quiz-btn')
     btn.addEventListener('click', function() {
@@ -136,7 +143,7 @@ function endQuiz() {
         storage.push(userObj)
         localStorage.setItem('quizHighscores', JSON.stringify(storage))
 
-        //window.location.href = 'highscores.html'
+        window.location.href = 'highscores.html'
     })
 }
 
