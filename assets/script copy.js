@@ -64,6 +64,11 @@ function showQuestions(index) {
         + '<button class="answer_details answer"><span>' + questions[index].options[3] + '</span></button>'
     que_text.innerHTML = que_tag;
     answer_list.innerHTML = answer_tag;
+
+    let option = option_list.getElementById("answer-btn");
+    for (let i = 0; i < option.length; i++) {
+        option[i].setattribute("onclick", "optionSelected(this)");
+    }
 }
 
 let que_count = 0;
@@ -79,7 +84,8 @@ nextQuestionBtnEl.onclick = () => {
 
 
 let time = 60
-function startTimer() {    
+function startTimer() {
+    
     let counter = setInterval(timer, 1000);
     function timer() {
         console.log(que_count)
@@ -93,7 +99,7 @@ function startTimer() {
     }
 }
 
-let score = 7
+let score = 0
 function updateScore() {
     keepScore.textContent = "7";
 }
@@ -199,3 +205,4 @@ let questions = [
         ]
     },
 ]
+

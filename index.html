@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timed Technology Quiz</title>
+    <title>Timed java Script</title>
      <!-- links to css and js-->
      <link rel="stylesheet" href="./assets/style.css"/>
      
@@ -15,7 +15,9 @@
 
 <body>
     <!-- HIGH SCORE NAVIGATION BAR PULLING FROM LOCAL STORAGE -->
-    <nav class="high_score_navigation" id="high_score">See High Scores</nav>      
+    <div class="high_score_navigation" id="high_score">See High Scores 
+        <a href="/highscores.html" id="highscore-btn" class="high_score_btn"></a>
+    </div>
     <!-- Welcome/Start Box -->
     <section class="start_box" id="start_quiz">
         <header class="start_page_header">
@@ -60,10 +62,10 @@
                 <span>How many letters, and, and, and, and, are in HTML?</span>
             </div>
             <div class="answers-btn" id="answer-btn">
-                <button class="answer_details answer"><span>Answer 1</span></button>
-                <button class="answer_details answer"><span>Answer 2</span></button>
-                <button class="answer_details answer"><span>Answer 3</span></button>
-                <button class="answer_details answer"><span>Answer 4</span></button>            
+                <button class="ansBtn" id="ansBtn"><span>Answer 1</span></button>
+                <button class="ansBtn" id="ansBtn"><span>Answer 2</span></button>
+                <button class="ansBtn" id="ansBtn"><span>Answer 3</span></button>
+                <button class="ansBtn" id="ansBtn" ><span>Answer 4</span></button>            
             </div>
             <!-- Next Button -->
             <div class="next_button" id="next_question">
