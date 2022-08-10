@@ -98,21 +98,20 @@ function updateScore() {
     keepScore.textContent = "7";
 }
 
-function selectAnswer() {
-    let selAnswerBtn = document.getElementById('answer-btn')
-    selAnswerBtn.addEventListener("click", function() {
+function selectAnswer(event) {
+    let answer = event.target.textContent;
+    console.log('clicked answer');
         if (questions.options === questions.answer) {
             console.log("correct answer")
-            score + 5
+            score += 5;
             console.log(score)
         }
         else {
         console.log("wrong answer")
         time -= 5;
         }
-      }
-    )
 }
+
 
 function endQuiz() {
     quizQuestBoxEl.className += " start_question_turnOff";
@@ -163,6 +162,9 @@ function cancelQuiz() {
 beginBtnEl.onclick = seeRules;
 beginQuizBtnEl.onclick = countdownMessage;
 quitQuizBtnEl.onclick = cancelQuiz;
+
+let selAnswerBtn = document.getElementById('answer-btn');
+selAnswerBtn.addEventListener('click', selectAnswer);
 
 
 
