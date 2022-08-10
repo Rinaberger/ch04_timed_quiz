@@ -23,6 +23,8 @@ let countdownText = messageEl.split(' ');
 let timeCounter = document.getElementById("seconds");
 
 let keepScore = document.getElementById("calc-score");
+//populate final score
+let showFinalScore = document.getElementById("finalScore");
 
 
 //BEGIN FUNCTIONS
@@ -110,19 +112,11 @@ function selectAnswer(event) {
         }
 }
 
-/*
-let scoreTag = document.getElementById("finalscore");
-function showFinalScore() {
-    let finalScore = '<div class="final_score" id="finalScore">' + score + '</div>'
-    scoreTag.innerHTML = "12";
-    console.log("final score");
-} */
-
 function endQuiz() {
     quizQuestBoxEl.className += " start_question_turnOff";
     endQuizEl.className += 'end-on'
     highScoreEl.className += " high_score_turnOn"
-    //showFinalScore();  
+    showFinalScore.textContent = score;  
 
 
     let btn = document.getElementById('end-quiz-btn')
@@ -132,7 +126,7 @@ function endQuiz() {
 
         let userObj = {
             user: username,
-            userHighscore: score
+            userHighscore: score   //this is getting pulled to localStorage
         }
 
         let storage = JSON.parse(localStorage.getItem('quizHighscores'))
