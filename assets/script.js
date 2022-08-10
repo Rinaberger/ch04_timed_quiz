@@ -101,17 +101,16 @@ function updateScore() {
 function selectAnswer() {
     let selAnswerBtn = document.getElementById('answer-btn')
     selAnswerBtn.addEventListener("click", function() {
-        if (questions.answer === options) {
+        if (questions.options === questions.answer) {
             console.log("correct answer")
             score + 5
             console.log(score)
         }
         else {
         console.log("wrong answer")
-        time = (time - 5)
-        } 
-
-    }
+        time -= 5;
+        }
+      }
     )
 }
 
