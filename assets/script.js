@@ -148,15 +148,12 @@ function endQuiz() {
     })
 }
 
-
 function cancelQuiz() {
     startBoxEl.className += " start_box_turnOn";
     highScoreEl.className += " high_score_turnOn";
     rulesBoxEl.className += " rules_box_turnOff";
     location.reload()
 }
-
-
 
 
 
@@ -176,38 +173,90 @@ selAnswerBtn.addEventListener('click', selectAnswer);
 
 
 
+
+
 // **** LIST OF QUESTION 
 
 //adding questions
 let questions = [
     {
-        question: 'What does 1 stand for?',
-        answer: "Java Script",
+        question: 'JavaScript statements include:',
+        answer: "All of the above",
         options: [
-            "Java", 
-            "Script",
-            "Java Script",
-            "None of the above."
+            "Values", 
+            "Operators",
+            "Expressions",
+            "All of the above"
         ]
     },
     {
-        question: 'What does 2 stand for?',
-        answer: "Java Script2",
+        question: 'To make a comment in the JS file, you need to add:',
+        answer: "// or /*..*/",
         options: [
-            "Java2",
-            "Script2",
-            "Java Script2",
-            "None of the above.2",
+            "< >",
+            "***",
+            "// or /*..*/",
+            "None of the above",
         ]
     },
     {
-        question: 'What does 3 stand for?',
-        answer: "Java Script3",
+        question: 'The ++ operator in arithmetic operators does what?',
+        answer: "Increments",
         options: [
-            "Java3",
-            "Script3",
-            "Java Script3",
-            "None of the above.3",
+            "Increments",
+            "Subtracts",
+            "Decrements",
+            "Multiplies",
+        ]
+    },
+    {
+        question: 'JavaScript variables are:',
+        answer: "Containers for data values",
+        options: [
+            "Another form of CSS", 
+            "Containers for data values",
+            "Used only in mathematical formulas",
+            "Are not needed in defining JS Objects",
+        ]
+    },
+    {
+        question: 'Which are examples of variable data types?',
+        answer: "All of the above",
+        options: [
+            "Number",
+            "String",
+            "Object",
+            "All of the above",
+        ]
+    },
+    {
+        question: 'Arrays, which hold more than on value, begin and end with:',
+        answer: "[ ]",
+        options: [
+            "[ ]",
+            "{ }",
+            "' '",
+            "( )",
+        ]
+    },
+    {
+        question: 'A Booleans represents:',
+        answer: "True or False",
+        options: [
+            "The events in an If/Else condition",
+            "A null value",
+            "True or False",
+            "None of the above",
+        ]
+    },
+    {
+        question: 'One of the core elements to getting a random output is:',
+        answer: "[ ]",
+        options: [
+            "getElementId",
+            "setDate()",
+            "sort.values",
+            "Math.random",
         ]
     },
 ]
