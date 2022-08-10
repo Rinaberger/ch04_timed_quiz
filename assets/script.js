@@ -98,6 +98,23 @@ function updateScore() {
     keepScore.textContent = "7";
 }
 
+function selectAnswer() {
+    let selAnswerBtn = document.getElementById('answer-btn')
+    selAnswerBtn.addEventListener("click", function() {
+        if (questions.answer === options) {
+            console.log("correct answer")
+            score + 5
+            console.log(score)
+        }
+        else {
+        console.log("wrong answer")
+        time = (time - 5)
+        } 
+
+    }
+    )
+}
+
 function endQuiz() {
     quizQuestBoxEl.className += " start_question_turnOff";
     endQuizEl.className += 'end-on'
@@ -134,22 +151,7 @@ function cancelQuiz() {
 }
 
 
-/* function selectAnswer() {
-    let selAnswerBtn = document.getElementById('answer-btn')
-    selAnswerBtn.addEventListener("click", function() {
-        if (questions.answers === options) {
-            console.log("correct answer")
-            score + 5
-            console.log(score)
-        }
-        else {
-        console.log("wrong answer")
-        time = (time - 5)
-        } 
 
-    }
-    )
-} */
 
 
 
