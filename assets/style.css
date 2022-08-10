@@ -296,3 +296,70 @@ body {
     padding: 10px 0 10px 0;
 }
 /* end timer/score box style */
+
+/* BEGIN STYLING OF WELCOME/BEGIN SCREEN */
+
+.end-box {
+    display: none;             /* hide start box */
+}
+
+.end-box_turnOff {
+    display: none;
+}
+
+.end-box_turnOn {
+    display: block;
+}
+
+.end-box_header {
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center; 
+    margin: 25px 0 0 0;     
+}
+
+.display_score_text {
+    font-size: 60px;
+    position: absolute;
+    top: 30%;
+    left: 39%;
+    text-align: center;    
+}
+
+.final_score {
+    font-size: 60px;
+    position: absolute;
+    top: 47%;
+    left: 48%;
+    color: green;
+}
+
+.input_initials {
+    position: absolute;
+    top: 63%;
+    left: 45%;
+}
+
+
+.add_initials {
+    position: absolute;
+    top: 70%;
+    left: 44%
+}
+
+.submit_info {
+    position: absolute;
+    top: 75%;
+    left: 44%;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-size: 35px;
+    font-weight: 400;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: all .3s ease;
+    z-index: 9;
+}
+/* end styling */

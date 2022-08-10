@@ -12,10 +12,8 @@ let countdownEl = document.getElementById("countdown");
 let countdownTextEl = document.getElementById("countdown_text");
 let quizQuestBoxEl = document.getElementById("q&a");
 
-//variable getting questions and answers
-//let questionEl = document.getElementById('question');
-//let answerButtonsEl = document.getElementById('answer-btn');
 let nextQuestionBtnEl = document.getElementById("next_question");
+let endQuizEl = document.getElementById('end')
 
 // adding variable text for countdowm
 let messageEl = ('And Here We Go');
@@ -23,6 +21,9 @@ let countdownText = messageEl.split(' ');
 
 //adding timer variable
 let timeCounter = document.getElementById("seconds");
+
+let keepScore = document.getElementById("calc-score");
+
 
 //BEGIN FUNCTIONS
 function seeRules() {
@@ -37,8 +38,9 @@ function countdownMessage() {
     let wordCount = 0;
     let msgInterval = setInterval(function () {
         if (countdownText[wordCount] === undefined) {
-            startTimer(60),
+            startTimer(),
             beginQuestions()
+            clearInterval(msgInterval)
         } else {
             countdownEl.textContent = countdownText[wordCount];
             wordCount++;
@@ -52,20 +54,6 @@ function beginQuestions() {
     showQuestions(0);    
 }
 
-let que_count = 0;
-let counter;
-//click next to next questions
-nextQuestionBtnEl.onclick = () => {
-    if (que_count < questions.length - 1) {
-        que_count++;
-        showQuestions(que_count);
-    }
-    else {
-        console.log("Questions completed");
-    }
-}
-
-
 function showQuestions(index) {
     let que_text = document.getElementById("question");
     let answer_list = document.getElementById("answer-btn");
@@ -78,16 +66,68 @@ function showQuestions(index) {
     answer_list.innerHTML = answer_tag;
 }
 
-function startTimer(time) {
-    counter = setInterval(timer, 1000);
-    function timer() {
-        timeCounter.textContent = time;
-        time--;
+let que_count = 0;
+//click next to next questions
+nextQuestionBtnEl.onclick = () => {
+    if (que_count < questions.length - 1) {
+        que_count++;
+        showQuestions(que_count);
+    } else {
+        que_count++;
     }
 }
 
 
+let time = 60
+function startTimer() {
+    
+    let counter = setInterval(timer, 1000);
+    function timer() {
+        console.log(que_count)
+        time--;
+        timeCounter.textContent = time;
+        if(time === 0 || que_count > questions.length - 1) {
+            console.log('quiz is over')
+            endQuiz()
+            clearInterval(counter)
+        }
+    }
+}
+
+let score = 0
+function updateScore() {
+    keepScore.textContent = "7";
+}
+
 function endQuiz() {
+    quizQuestBoxEl.className += " start_question_turnOff";
+    endQuizEl.className += 'end-on'
+    highScoreEl.className += " high_score_turnOn"
+
+    let btn = document.getElementById('end-quiz-btn')
+    btn.addEventListener('click', function() {
+        let username = document.getElementById('username').value
+        username.value = '';
+
+        let userObj = {
+            user: username,
+            userHighscore: score
+        }
+
+        let storage = JSON.parse(localStorage.getItem('quizHighscores'))
+        if (storage === null) {
+            storage =[]
+        }
+
+        storage.push(userObj)
+        localStorage.setItem('quizHighscores', JSON.stringify(storage))
+
+        //window.location.href = 'highscores.html'
+    })
+}
+
+
+function cancelQuiz() {
     startBoxEl.className += " start_box_turnOn";
     highScoreEl.className += " high_score_turnOn";
     rulesBoxEl.className += " rules_box_turnOff";
@@ -96,16 +136,28 @@ function endQuiz() {
 
 
 function selectAnswer() {
+    let selAnswerBtn = document.getElementById('answer-btn')
+    selAnswerBtn.addEventListener("click", function() {
+        if (questions.answers === options) {
+            console.log("correct answer")
+            score + 5
+            console.log(score)
+        }
+        else {
+        console.log("wrong answer")
+        time - 5
+        }
+
+    }
+    )
 
 }
 
 
 // Start Button Clicks
 beginBtnEl.onclick = seeRules;
-
 beginQuizBtnEl.onclick = countdownMessage;
-
-quitQuizBtnEl.onclick = endQuiz;
+quitQuizBtnEl.onclick = cancelQuiz;
 
 
 
@@ -116,10 +168,10 @@ let questions = [
         question: 'What does 1 stand for?',
         answer: "Java Script",
         options: [
-            "Java",
+            "Java", 
             "Script",
             "Java Script",
-            "None of the above.",
+            "None of the above."
         ]
     },
     {
