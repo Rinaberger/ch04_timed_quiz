@@ -1,3 +1,7 @@
+
+
+// ***** BEGIN VARIABLES *****
+
 // listing core elements
 let highScoreEl = document.getElementById("high_score");
 let beginBtnEl = document.getElementById("begin-btn-1");
@@ -9,14 +13,14 @@ let beginQuizBtnEl = document.getElementById("start_questions");
 let quitQuizBtnEl = document.getElementById("quit_quiz");
 
 let countdownEl = document.getElementById("countdown");
-let countdownTextEl = document.getElementById("countdown_text");
+//let messageEl = document.getElementById("countdown_text");
 let quizQuestBoxEl = document.getElementById("q&a");
 
 let nextQuestionBtnEl = document.getElementById("next_question");
 let endQuizEl = document.getElementById('end')
 
 // adding variable text for countdowm
-let messageEl = ('And Here We Go');
+messageEl = ("And Here We Go!")
 let countdownText = messageEl.split(' ');
 
 //adding timer variable
@@ -26,13 +30,15 @@ let keepScore = document.getElementById("calc-score");
 //populate final score
 let showFinalScore = document.getElementById("finalScore");
 
-
 //BEGIN FUNCTIONS
 function seeRules() {
     rulesBoxEl.className += " rules_box_turnOn";
     startBoxEl.className += " start_box_turnOff";
     highScoreEl.className += " high_score_turnOff";
 }
+
+
+// *****  BEGIN FUNCTIONS *****
 
 //countdown text function
 function countdownMessage() {
@@ -80,7 +86,7 @@ nextQuestionBtnEl.onclick = () => {
 }
 
 
-let time = 45
+let time = 30
 function startTimer() {    
     let counter = setInterval(timer, 1000);
     function timer() {
@@ -107,8 +113,9 @@ function selectAnswer(event) {
             keepScore.textContent = score;
         }
         else {
-        console.log("wrong answer")
+        console.log("wrong answer")        
         time -= 5;
+        console.log(time)
         }
 }
 
@@ -157,7 +164,7 @@ function cancelQuiz() {
 
 
 
-
+// ***** BUTTON EVENTS *****
 
 // Start Button Clicks
 beginBtnEl.onclick = seeRules;
@@ -169,6 +176,7 @@ selAnswerBtn.addEventListener('click', selectAnswer);
 
 
 
+// **** LIST OF QUESTION 
 
 //adding questions
 let questions = [

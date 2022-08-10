@@ -312,16 +312,16 @@ body {
 }
 
 .end-box_header {
-    font-size: 80px;
+    font-size: 95px;
     font-weight: bold;
     text-align: center; 
-    margin: 25px 0 0 0;     
+    margin: 15px 0 0 0;     
 }
 
 .display_score_text {
     font-size: 60px;
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 39%;
     text-align: center;    
 }
@@ -329,27 +329,27 @@ body {
 .final_score {
     font-size: 60px;
     position: absolute;
-    top: 47%;
+    top: 53%;
     left: 48%;
     color: green;
 }
 
 .input_initials {
     position: absolute;
-    top: 63%;
+    top: 65%;
     left: 45%;
 }
 
 
 .add_initials {
     position: absolute;
-    top: 70%;
+    top: 73%;
     left: 44%
 }
 
 .submit_info {
     position: absolute;
-    top: 75%;
+    top: 80%;
     left: 44%;
     background-color: var(--button-color);
     color: var(--text-color);

@@ -34,10 +34,9 @@
         </div>
         <div class="rules_list">
             <div class="rules_details">1) This quiz has <span>8 questions</span> about Javascript.</div>
-            <div class="rules_details">2) You will have <span>60 seconds</span> to answer as many questions correctly during that time.</div>
+            <div class="rules_details">2) You will have <span>30 seconds</span> to answer as many questions correctly during that time.</div>
             <div class="rules_details">3) You will earn <span>5 points</span> for every correct answer.</div>
-            <div class="rules_details">4) You will lose <span>5 seconds</span> of time for every incorrect answer.</div>
-            <div class="rules_details">5) For every second of time remaining, you will earn <span>5 BONUS</span> points to your total score.</div>
+            <div class="rules_details">4) You will lose <span>5 seconds</span> of time for every incorrect answer.</div>            
         </div>
         <!-- Begin/Cancel Buttons -->
         <div class="rules_buttons">
@@ -52,7 +51,7 @@
 
     <!-- countdown "5, 4, 3, 2, 1, Begin Quiz "-->
     <section class="countdown" id="countdown">
-        <h2 class="countdowntext" id="countdown_text"></h2>
+        <h2 class="countdowntext" id="countdown_text">And Here We Go!</h2> <!-- styling on line 177 of CSS -->
     </section>
 
     <!-- Question/Answers-->
@@ -75,7 +74,7 @@
         <!-- Timer -->
         <div class="timer-box" id="timer-box">
             <div class="timer" id="timeleft">
-                <span class=seconds id=seconds>60</span> seconds
+                <span class=seconds id=seconds>30</span> seconds
             </div>
             <div class="score" id="score">
                 <span class="calculated-score" id="calc-score">0</span> points
