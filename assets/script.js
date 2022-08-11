@@ -104,9 +104,10 @@ function startTimer() {
 let score = 0
 
 function selectAnswer(event) {
-    let answer = event.target.textContent;
+    let answer = event.target /*.textContent; */
     console.log('clicked answer');
-        if (questions.options === questions.answer) {
+    console.log(event.target);
+        if (answer === questions.answer) {
             console.log("correct answer")
             score += 5;
             console.log(score)
