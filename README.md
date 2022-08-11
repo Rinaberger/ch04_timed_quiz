@@ -13,13 +13,14 @@ PURPOSE:
 
 This assignment was designed to apply my learnings around HTML, CSS, and javaScript to develop a timed quiz without starter code. The features
 of the quiz include:
-    1) Create a landing page that allows user to checkout highs cores (stored in localStorage) and begin quiz.
-    2) The user will be provided the overall rules/instructions of the quiz prior to beginning the quiz, and the option to quit, if they don't want to take the quiz.
-    3) Once the user begins quiz, there is a brief countdown allowing the user time to get ready.
-    4) Once countdown is complete, the first multiple choice question appears and the timer and score appears in upper left corner. Timer begins counting down from the set time.
-    5) User can choose between one of four answers. If the answer is correct, 5 points are added to score. If answer is incorrect, 5 seconds is deducted from the timer.
-    6) The quiz is over at either 1) all eight questions are answered, or 2) the timer runs out. 
-    7) The End Quiz screen displays the final score and allows the user to input their initials or name to be added to the high scores (stored in localStorage).
+
+1) Create a landing page that allows user to checkout highs cores (stored in localStorage) and begin quiz.
+2) The user will be provided the overall rules/instructions of the quiz prior to beginning the quiz, and the option to quit, if they don't want to take the quiz.
+3) Once the user begins quiz, there is a brief countdown allowing the user time to get ready.
+4) Once countdown is complete, the first multiple choice question appears and the timer and score appears in upper left corner. Timer begins counting down from the set time.
+5) User can choose between one of four answers. If the answer is correct, 5 points are added to score. If answer is incorrect, 5 seconds is deducted from the timer.
+6) The quiz is over at either 1) all eight questions are answered, or 2) the timer runs out. 
+7) The End Quiz screen displays the final score and allows the user to input their initials or name to be added to the high scores (stored in localStorage).
 
 
 USER STORY
