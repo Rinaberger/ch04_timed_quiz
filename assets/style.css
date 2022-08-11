@@ -175,6 +175,7 @@ body {
 
 /*BEGIN COUNTDOWN STYLING */
 .countdowntext {
+    display: none;
     font: var(--fun-font);
     font-weight: 700;
     font-size: 300px;

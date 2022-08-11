@@ -86,7 +86,7 @@ nextQuestionBtnEl.onclick = () => {
 }
 
 
-let time = 30
+let time = 60
 function startTimer() {    
     let counter = setInterval(timer, 1000);
     function timer() {
@@ -251,7 +251,7 @@ let questions = [
     },
     {
         question: 'One of the core elements to getting a random output is:',
-        answer: "[ ]",
+        answer: "Math.random",
         options: [
             "getElementId",
             "setDate()",

@@ -47,3 +47,8 @@ THEN the game is over (COMPLETED)
 
 WHEN the game is over
 THEN I can save my initials and score (COMPLETED)
+
+
+Credits:
+  -- YouTube: Brian Design: How To Make A Quiz App Using HTML CSS Javascript
+  -- YouTube: CodingNepal: Create a Quiz App with Timer Using HTML CSS & JavaScript (Part 1 & 2)
